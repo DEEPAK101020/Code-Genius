@@ -1,106 +1,4 @@
 // import { useState } from "react";
-// import { Box, Button, Container,Input, Text, useToast } from "@chakra-ui/react";
-
-
-// const SearchPath = () => {
-//   const toast = useToast(); // Initialize Chakra UI toast for displaying error messages
-//   const [searchResult, setSearchResult] = useState(""); // To store the search result
-//   const [error, setError] = useState(""); // To store error message
-//   const [searchQuery, setSearchQuery] = useState(""); // State variable to store user input for the search query
-
-//   const handleSearch = async (e) => {
-//     e.preventDefault();
-//     try {
-//       let query = "";
-//       switch (searchQuery) {
-//         case "PCMB":
-//           query = "https://www.careerguide.com/ask/t/about-the-career-options-after-pcbm-category";
-//           break;
-//         case "PCMC":
-//           query = "Get detailed information about PCMC courses and career path after that";
-//           break;
-//         case "PCME":
-//           query = "Get detailed information about PCME courses and career path after that";
-//           break;
-//         default:
-//           setError("Please enter a valid course name");
-//           return;
-//       }
-//       const res = await fetch("https://api.openai.com/v1/chat/completions", {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//           Authorization: "Bearer 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",
-//         },
-//         body: JSON.stringify({
-//           model: "gpt-3.5-turbo",
-//           messages: [
-//             {
-//               role: "user",
-//               content: query,
-//             },
-//           ],
-//         }),
-//       });
-//       if (!res.ok) {
-//         throw new Error("Failed to fetch data");
-//       }
-//       const data = await res.json();
-//       setSearchResult(data.choices[0].message.content);
-//       setError("");
-//     } catch (error) {
-//       console.error("Error fetching data:", error);
-//       setError("Error fetching data. Please try again later.");
-//       setSearchResult("");
-//     }
-//   };
-
-//   return (
-    
-//       <Box>
-//         {/* Search container */}
-//         <Container maxW="container.md" p={5}>
-//           <Text as="h1" fontSize="3xl" fontWeight="bold" mb={5} color="black" textAlign="center">
-//             Career Path Search
-//           </Text>
-//           <form onSubmit={handleSearch} className="mb-5">
-//             <Input
-//               type="text"
-//               placeholder="Enter the course name (PCMB, PCMC, PCME)"
-//               value={searchQuery}
-//               onChange={(e) => setSearchQuery(e.target.value)}
-//               size="sm"
-//               mb={2}
-//             />
-//             <Button type="submit" colorScheme="blue">
-//               Search
-//             </Button>
-//           </form>
-//           {error && (
-//             <Box color="red.500" mb={2}>
-//               {error}
-//             </Box>
-//           )}
-//           {searchResult && (
-//             <Box border="1px solid" p={4}>
-//               <Text as="h2" fontSize="xl" fontWeight="bold" mb={2}>
-//                 Career Path:
-//               </Text>
-//               <Text>{searchResult}</Text>
-//             </Box>
-//           )}
-//         </Container>
-//       </Box>
- 
-//   );
-// };
-
-// export default SearchPath;
-
-
-
-
-// import { useState } from "react";
 // import backgroundImage from "../Image/bg3.png";
 
 // const SearchPath = () => {
@@ -271,7 +169,7 @@ const SearchPath = () => {
 
   return (
     <Flex direction="column" align="center" minH="100vh">
-      <Box bgImage={`url(${backgroundImage})`} bgSize="cover" bgPosition="center" w="100%" h="300px">
+      <Box bgImage={`url(${backgroundImage})`} bgSize="cover" bgPosition="center" w="100%" h="340px"marginTop="30px">
         <Container maxW="container.lg" p={5} textAlign="center">
           <Text as="h1" fontSize="3xl" fontWeight="bold" color="black" mb={5}>Enter Your Desired Course to Find The RoadMap</Text>
           <Text color="white"fontSize="2xl">Choosing a career is one of the most important decisions a person has to make in their life. It is so important because that is what we will have to do to support ourselves throughout life. Imagine being stuck in a dead end job and having to go to work every morning and dreading it.</Text>
@@ -286,11 +184,12 @@ const SearchPath = () => {
             onChange={(e) => setSearchQuery(e.target.value)}
             size="md"
             mr={3}
-            marginTop={3}
+            mb={10}
+            // marginTop={3}
             textColor={"black"}
             fontWeight={"bold"}
           />
-          <Button type="submit" colorScheme="blue"  marginTop={3}>
+          <Button type="submit" colorScheme="red"  mb={10}>
             Search
           </Button>
         </form>

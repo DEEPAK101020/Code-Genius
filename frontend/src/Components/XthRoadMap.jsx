@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import { useState } from "react";
 const XthRoadMap = () => {
   const [test1English, setTest1English] = useState(87);
@@ -96,25 +97,30 @@ const XthRoadMap = () => {
       Suggest me top 3 course based on my score   
       `;
 
-      const res = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization:
-            "Bearer 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",
-        },
-        body: JSON.stringify({
-          model: "gpt-3.5-turbo",
-          messages: [
-            {
-              role: "user",
-              content: query,
-            },
-          ],
-        }),
-      });
-      const data = await res.json();
-      setResult(data.choices[0].message.content);
+      try {
+        const res = await fetch("https://api.openai.com/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization:
+              "Bearer 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",
+          },
+          body: JSON.stringify({
+            model: "gpt-3.5-turbo",
+            messages: [
+              {
+                role: "user",
+                content: query,
+              },
+            ],
+          }),
+        });
+  
+        const data = await res.json();
+        setResult(data.choices[0].message.content);
+      } catch (error) {
+        console.error("Error:", error.message);
+      }
     }
   };
 
@@ -663,16 +669,20 @@ const XthRoadMap = () => {
           </select>
         </div>
       </form>
-      <button
-        className="w-1/10 bg-red-500 px-5 py-3 text-3xl  "
-        onClick={findRoadmap}
-      >
-        submit
-      </button>
-      <div className="result ">
-        {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
-        <pre> {result}</pre>
-      </div>
+      <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+  <button
+    className="w-1/10 bg-red-500 px-5 py-3 text-3xl mt-4 rounded-lg"
+    onClick={findRoadmap}
+  >
+    Submit
+  </button>
+
+  {result && (
+    <Box border="1px solid" p={4} mt={4} maxW="80%">
+      <pre className="text-wrap">{result}</pre>
+    </Box>
+  )}
+</Box>
 
      
     </>
