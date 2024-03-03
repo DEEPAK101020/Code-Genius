@@ -1,11 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-input {
+input,
+select {
   border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
 }
-
 .tests {
   border: 1px solid black;
   border-radius: 15px;
