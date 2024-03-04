@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { useState } from "react";
+import SearchPath from "./SearchPath";
 const XthRoadMap = () => {
   const [test1English, setTest1English] = useState(87);
   const [test1Hindi, setTest1Hindi] = useState(77);
@@ -32,7 +33,6 @@ const XthRoadMap = () => {
   const [test3Diff, setTest3Diff] = useState("Medium");
   const [test4Diff, setTest4Diff] = useState("Medium");
   const [finalDiff, setFinalDiff] = useState("Medium");
-
 
   const findRoadmap = async (e) => {
     e.preventDefault();
@@ -115,7 +115,7 @@ const XthRoadMap = () => {
             ],
           }),
         });
-  
+
         const data = await res.json();
         setResult(data.choices[0].message.content);
       } catch (error) {
@@ -126,13 +126,12 @@ const XthRoadMap = () => {
 
   return (
     <>
-     
-   <form
+      <form
         onSubmit={findRoadmap}
         className="flex p-5 justify-around flex-wrap  "
       >
-        <div className=" test1 tests w-2/5 flex  flex-col gap-1 px-5" >
-        <h1>Test Series 1</h1>
+        <div className=" test1 tests w-2/5 flex  flex-col gap-1 px-5">
+          <h1>Test Series 1</h1>
           <label>English Marks : </label>
           <input
             type="number"
@@ -404,7 +403,7 @@ const XthRoadMap = () => {
           </select>
         </div>
       </form>
-     <div className="flex justify-around items-center">
+      <div className="flex justify-around items-center">
         <div>
           <label>Final Exam Difficulty : </label>
           <select
@@ -426,14 +425,12 @@ const XthRoadMap = () => {
         </button>
       </div>
 
-  {result && (
-    <Box border="1px solid" p={4} m="20px auto"  maxW="80%">
-      <pre className="text-wrap">{result}</pre>
-    </Box>
-  )}
-
-
-     
+      {result && (
+        <Box border="1px solid" p={4} m="20px auto" maxW="80%">
+          <pre className="text-wrap">{result}</pre>
+        </Box>
+      )}
+      {result && <SearchPath />}
     </>
   );
 };
