@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router";
 import XthRoadMap from "../Components/XthRoadMap";
 import Home from "../Pages/Home";
+import About from "../Components/About";
 
 function MainRoute() {
   return (
@@ -9,6 +10,7 @@ function MainRoute() {
         <Route path="/" element={ <Home />}/>
 
         <Route path="/roadmap" element={<XthRoadMap />} />
+        <Route path="/about" element={<About />} />
         {/* <Route path="/" element={<Home />} /> */}
       </Routes>
     </>
