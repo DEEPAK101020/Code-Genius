@@ -1,12 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-input,
+.marks input,
 select {
   border: 1px solid black;
   border-radius: 5px;
-   /* padding: 5px;  */
-  padding-left: 20px;
+  padding: 5px;
+  /* padding-left: 20px; */
+}
+.navbar {
+  background-color: #f6f6f4;
+  height: 80px;
+}
+.marks h1 {
+  text-align: center;
+  font-weight: 700;
 }
 .tests {
   border: 1px solid black;
@@ -16,10 +24,24 @@ select {
 }
 
 .search::placeholder {
-  color:black;
-  opacity: 1; /* Firefox */
+  color: black;
+  opacity: 0.8;
 }
-.searchcolor{
-background: rgb(88,87,109);
-background: linear-gradient(90deg, rgba(88,87,109,1) 0%, rgba(114,112,198,1) 22%, rgba(136,136,206,1) 39%, rgba(90,152,169,1) 65%, rgba(90,169,186,1) 88%, rgba(90,173,190,1) 100%);
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.searchcolor {
+  background: rgb(88, 87, 109);
+  background: linear-gradient(
+    90deg,
+    rgba(88, 87, 109, 1) 0%,
+    rgba(114, 112, 198, 1) 22%,
+    rgba(136, 136, 206, 1) 39%,
+    rgba(90, 152, 169, 1) 65%,
+    rgba(90, 169, 186, 1) 88%,
+    rgba(90, 173, 190, 1) 100%
+  );
 }

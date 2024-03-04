@@ -1,12 +1,8 @@
-// import "./App.css";
-// import React from "react";
-import XthRoadMap from "./Components/XthRoadMap";
-import SearchPath from "./Components/SearchPath";
 import { ChakraProvider } from "@chakra-ui/react";
 import NavBar from "./Components/NavBar";
 import { BrowserRouter as Router } from "react-router-dom";
 import MainRoute from "./MainRoute/MainROute";
-import About from "./Components/About";
+import Footer from "./Components/Footer";
 
 function App() {
   // const [result, setResult] = React.useState("");
@@ -18,6 +14,7 @@ function App() {
           {/* <XthRoadMap /> */}
           {/* <SearchPath /> */}
           <MainRoute />
+          <Footer />
         </Router>
       </ChakraProvider>
     </>

@@ -1,6 +1,7 @@
-import { Box } from "@chakra-ui/react";
-import { useState } from "react";
+import { Box, Button } from "@chakra-ui/react";
+import { useRef, useState } from "react";
 import SearchPath from "./SearchPath";
+import LoadingToast from "./LoadingToast";
 const XthRoadMap = () => {
   const [test1English, setTest1English] = useState(87);
   const [test1Hindi, setTest1Hindi] = useState(77);
@@ -33,8 +34,10 @@ const XthRoadMap = () => {
   const [test3Diff, setTest3Diff] = useState("Medium");
   const [test4Diff, setTest4Diff] = useState("Medium");
   const [finalDiff, setFinalDiff] = useState("Medium");
-
+  const paragraphRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(false);
   const findRoadmap = async (e) => {
+    setIsLoading(true);
     e.preventDefault();
     setResult("");
     if (
@@ -117,8 +120,11 @@ const XthRoadMap = () => {
         });
 
         const data = await res.json();
+
+        setIsLoading(false);
         setResult(data.choices[0].message.content);
       } catch (error) {
+        setIsLoading(false);
         console.error("Error:", error.message);
       }
     }
@@ -126,11 +132,12 @@ const XthRoadMap = () => {
 
   return (
     <>
+      {isLoading && <LoadingToast />}
       <form
         onSubmit={findRoadmap}
         className="flex p-5 justify-around flex-wrap  "
       >
-        <div className=" test1 tests w-2/5 flex  flex-col gap-1 px-5">
+        <div className="marks test1 tests w-2/5 flex  flex-col gap-1 px-5">
           <h1>Test Series 1</h1>
           <label>English Marks : </label>
           <input
@@ -198,7 +205,7 @@ const XthRoadMap = () => {
             <option>Hard</option>
           </select>
         </div>
-        <div className="test2  tests  w-2/5  gap-1 flex  flex-col">
+        <div className="test2  marks  tests  w-2/5  gap-1 flex  flex-col">
           <h1>Test Series 2</h1>
           <label>English Marks : </label>
           <input
@@ -266,7 +273,7 @@ const XthRoadMap = () => {
             <option value={"Hard"}>Hard</option>
           </select>
         </div>
-        <div className="test3  tests  w-2/5  gap-1 flex  flex-col ">
+        <div className="test3 marks  tests  w-2/5  gap-1 flex  flex-col ">
           <h1>Test Series 3</h1>
           <label>English Marks : </label>
           <input
@@ -334,7 +341,7 @@ const XthRoadMap = () => {
             <option>Hard</option>
           </select>
         </div>
-        <div className="test4  tests  w-2/5  gap-1 flex  flex-col">
+        <div className="test4  marks  tests  w-2/5  gap-1 flex  flex-col">
           <h1>Test Series 4</h1>
           <label>English Marks : </label>
           <input
@@ -403,7 +410,7 @@ const XthRoadMap = () => {
           </select>
         </div>
       </form>
-      <div className="flex justify-around items-center">
+      <div className="flex justify-around py-10 items-center">
         <div>
           <label>Final Exam Difficulty : </label>
           <select
@@ -417,16 +424,25 @@ const XthRoadMap = () => {
             <option>Hard</option>
           </select>
         </div>
-        <button
-          className="w-1/10 bg-red-500  rounded-xl px-5 py-3 text-3xl  "
+        {/* <button
+          className="w-1/10 bg-red-500  rounded-xl px-5 py-3 text-2xl  "
           onClick={findRoadmap}
         >
-          submit
-        </button>
+          Submit
+        </button> */}
+        <Button colorScheme="blue" size="lg" onClick={findRoadmap}>
+          Submit
+        </Button>
       </div>
 
       {result && (
-        <Box border="1px solid" p={4} m="20px auto" maxW="80%">
+        <Box
+          ref={paragraphRef}
+          border="1px solid"
+          p={4}
+          m="20px auto"
+          maxW="80%"
+        >
           <pre className="text-wrap">{result}</pre>
         </Box>
       )}

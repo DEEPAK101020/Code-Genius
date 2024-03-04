@@ -1,67 +1,111 @@
 import { Button, Heading, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import "../assets/Home.css"
+import "../assets/Home.css";
 function Home() {
-    return (
-        <>
-            <header className="showcase bg-blue-500 text-white">
-               
-                <div className="showcase-content text-center py-16">
-                    <Heading as="h1" fontSize="4xl" mb="4">YOU ARE THE FUTURE!</Heading>
-                    <Text fontSize="lg" mb="8">Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.</Text>
-                    <Link to="/roadmap"><Button  colorScheme="blue" size="lg">Explore Future Possibilities!!<i className="fas fa-chevron-right btn-icon"></i></Button></Link>
-                </div>
-            </header>
+  return (
+    <>
+      <header className="showcase text-white">
+        <div className="showcase-content text-center text-black py-16">
+          <Heading as="h1" fontSize="4xl" mb="4">
+            YOU ARE THE FUTURE!
+          </Heading>
+          <Text fontSize="lg" mb="8">
+            Perfection is achieved, not when there is nothing more to add, but
+            when there is nothing left to take away.
+            <br />
+            Your ultimate guide to navigating the educational journey ahead.
+            Whether you're a high school student exploring career paths
+          </Text>
+          <Link to="/roadmap">
+            <Button colorScheme="blue" size="lg">
+              Explore Future Possibilities!!
+              <i className="fas fa-chevron-right btn-icon"></i>
+            </Button>
+          </Link>
+        </div>
+      </header>
 
-            <section className="features">
+      <section className="features">
         <div className="container">
-            <h2>Features</h2>
-            <div className="feature-item ">
-                <div className="feature-content">
-                    <h3>Personalized Learning Paths</h3>
-                    <p>Create your personalized learning path tailored to your strengths, interests, and goals. <br/> FutureMap offers a variety of courses and resources to cater to your individual needs.</p>
-                </div>
-                <img src="https://th.bing.com/th/id/OIP.CmkDqFYM1oOB05k7VCxu_gHaEo?rs=1&pid=ImgDetMain" alt="Feature 1"/>
+          <h2>Features</h2>
+          <div className="feature-item ">
+            <div className="feature-content">
+              <h3>Personalized Learning Paths</h3>
+              <p>
+                Create your personalized learning path tailored to your
+                strengths, interests, and goals. <br /> FutureMap offers a
+                variety of courses and resources to cater to your individual
+                needs.
+              </p>
             </div>
-            <div className="feature-item">
-                <div className="feature-content">
-                    <h3>Expert Guidance and Mentorship</h3>
-                    <p>Receive guidance and mentorship from experienced educators and industry professionals. <br/> Our team is dedicated to supporting you throughout your academic journey.</p>
-                </div>
-                <img src="https://gentum.co.ke/wp-content/uploads/2021/05/Mentorship-services-1-1024x571.jpg" alt="Feature 2"/>
+            <img
+              src="https://th.bing.com/th/id/OIP.CmkDqFYM1oOB05k7VCxu_gHaEo?rs=1&pid=ImgDetMain"
+              alt="Feature 1"
+            />
+          </div>
+          <div className="feature-item">
+            <div className="feature-content">
+              <h3>Expert Guidance and Mentorship</h3>
+              <p>
+                Receive guidance and mentorship from experienced educators and
+                industry professionals. <br /> Our team is dedicated to
+                supporting you throughout your academic journey.
+              </p>
             </div>
-            <div className="feature-item">
-                <div className="feature-content">
-                    <h3>Interactive Learning Resources</h3>
-                    <p>Engage with interactive learning materials including videos, quizzes, and simulations. <br/> Enhance your understanding and retention of course concepts through hands-on practice.</p>
-                </div>
-                <img src="https://www.infinitypro.asia/wp-content/uploads/2022/08/School-Webinar-Banner-02.jpg" alt="Feature 3"/>
+            <img
+              src="https://gentum.co.ke/wp-content/uploads/2021/05/Mentorship-services-1-1024x571.jpg"
+              alt="Feature 2"
+            />
+          </div>
+          <div className="feature-item">
+            <div className="feature-content">
+              <h3>Interactive Learning Resources</h3>
+              <p>
+                Engage with interactive learning materials including videos,
+                quizzes, and simulations. <br /> Enhance your understanding and
+                retention of course concepts through hands-on practice.
+              </p>
             </div>
+            <img
+              src="https://www.infinitypro.asia/wp-content/uploads/2022/08/School-Webinar-Banner-02.jpg"
+              alt="Feature 3"
+            />
+          </div>
         </div>
-        <h3 className="middleHead">“Experience a dynamic learning environment with FutureMap, offering a wide range of interactive resources and expert support to help you achieve your academic goals.”</h3>
-        <div className="card">
-            <div className="card-content">
-                <div className="text-content">
-                    <h2>Your Roadmap to Success</h2>
-                    <p>FutureMap is your ultimate companion in the journey towards academic excellence. <br/> With personalized learning paths, expert guidance, and interactive resources, FutureMap empowers students to reach their full potential and succeed in their academic endeavors.</p>
-                </div>
-                <div className="image-content">
-                    <img src="https://plantingscience.org/app/site/media/newroadmapimages/Student%20Communicate%20Online%20smaller.jpeg" alt="Card Image"/>
-                </div>
-            </div>
+      </section>
+      <h3 className="middleHead">
+        “Experience a dynamic learning environment with FutureMap, offering a
+        wide range of interactive resources and expert support to help you
+        achieve your academic goals.”
+      </h3>
+      <div className="card">
+        <div className="card-content">
+          <div className="text-content">
+            <h2>Your Roadmap to Success</h2>
+            <p>
+              FutureMap is your ultimate companion in the journey towards
+              academic excellence. <br /> With personalized learning paths,
+              expert guidance, and interactive resources, FutureMap empowers
+              students to reach their full potential and succeed in their
+              academic endeavors.
+            </p>
+          </div>
+          <div className="image-content">
+            <img
+              src="https://plantingscience.org/app/site/media/newroadmapimages/Student%20Communicate%20Online%20smaller.jpeg"
+              alt="Card Image"
+            />
+          </div>
         </div>
-    </section>
-
-        </>
-    );
+      </div>
+    </>
+  );
 }
 
 export default Home;
 
-
-
-
-{/* <title></title>
+{
+  /* <title></title>
 </head>
 <body>
   <header className="showcase">
@@ -143,4 +187,5 @@ export default Home;
   </footer>
   <script src="js/main.js"></script>
 </body>
-</html> */}
+</html> */
+}

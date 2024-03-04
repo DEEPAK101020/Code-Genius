@@ -88,10 +88,6 @@ const About = () => {
           helping users navigate their paths to success with foresight and
           precision
         </Text>
-        <Text>
-          Join us as we revolutionize the way coders work, learn, and
-          collaborate. Welcome to the future of coding—welcome to CodeFlow.
-        </Text>
       </Box>
     </Box>
   );
