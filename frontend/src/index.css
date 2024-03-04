@@ -5,11 +5,21 @@ input,
 select {
   border: 1px solid black;
   border-radius: 5px;
-  padding: 5px;
+   /* padding: 5px;  */
+  padding-left: 20px;
 }
 .tests {
   border: 1px solid black;
   border-radius: 15px;
   margin: 20px 0;
   padding: 20px;
+}
+
+.search::placeholder {
+  color:black;
+  opacity: 1; /* Firefox */
+}
+.searchcolor{
+background: rgb(88,87,109);
+background: linear-gradient(90deg, rgba(88,87,109,1) 0%, rgba(114,112,198,1) 22%, rgba(136,136,206,1) 39%, rgba(90,152,169,1) 65%, rgba(90,169,186,1) 88%, rgba(90,173,190,1) 100%);
 }
