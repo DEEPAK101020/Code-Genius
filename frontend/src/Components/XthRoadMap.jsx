@@ -105,8 +105,7 @@ const XthRoadMap = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization:
-              "Bearer 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",
+            Authorization: `Bearer ${import.meta.env.VITE_api_Key}`,
           },
           body: JSON.stringify({
             model: "gpt-3.5-turbo",
