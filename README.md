@@ -78,4 +78,9 @@ npm run server
 - Database: MongoDB
 - Deployment: render and vercel for frontend and backend
 
+## Team Members
+- Deepak Kumar = https://www.linkedin.com/in/deepak-k23/
+- Vinaygouda Meti = https://www.linkedin.com/in/vinayagoud-meti/
+- Aishwarya Lohakare = https://www.linkedin.com/in/aishwarya-lohakare/
+- Vikas Yadav =
   
