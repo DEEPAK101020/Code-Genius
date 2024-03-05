@@ -10,24 +10,24 @@ Future Map is your ultimate guide to navigating the educational journey ahead. W
 Frontend: - [Live Link](https://code-genius-l4ji-izhssylds-deepak101020s-projects.vercel.app/roadmap)
 
 ## Directory Structure
-
+```
 my-app/
-├─ node_modules/
-├─ public/
-├─ src/
-│  ├─ assets/
-│  ├─ components/
-│  ├─ pages/
-│  ├─ routes/
-│  ├─ util/
-│  ├─ index.js
-├─ .env
-├─ .gitignore
-├─ package.json
-├─ package.lock.json
-├─ tailwind.config.json
-
-
-
-
-
+├─ backend/
+│  ├─ controller/
+│  │  ├─ middlewares/
+│  │  ├─ routes/
+│  ├─ models/
+│  ├─ node_modules/
+│  ├─ .env/
+│  ├─ .gitignore/
+│  ├─ db.js/
+│  ├─ index.js/
+│  ├─ package.json/
+├─ frontend/
+│  ├─ images/
+│  ├─ public/
+│  ├─ scripts/
+│  ├─ styles/
+│  ├─ view/
+├─ index.html/
+```
