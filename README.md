@@ -72,6 +72,10 @@ npm run server
  ## APIs Used
  OpenAI API <a href="https://api.openai.com/v1/chat/completions" target="_blank">Judge</a>
 
-
+## Technology Stack
+- Frontend: React, Chakra UI, React-Redux, Tailwind
+- Backend: Node.js, Express.js, Mongoose , OpenAI
+- Database: MongoDB
+- Deployment: render and vercel for frontend and backend
 
   
