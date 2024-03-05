@@ -31,6 +31,24 @@ my-app/
 │  ├─ view/
 ├─ index.html/
 ```
+## Installation & Getting started
+Detailed instructions on how to install, configure, and get the project running. For BE/FS projects, guide the reviewer how to check mongodb schema etc.
+
+Application
+```bash
+git clone https://github.com/Vinay-the-dev-bot/CodeFlow.git
+cd frontend
+npm i
+npm run dev
+```
+
+Run Server Locally
+```bash
+git clone https://github.com/Vinay-the-dev-bot/CodeFlow.git
+cd backend
+npm i
+npm run server
+``` 
 
  ## Screenshots
  
