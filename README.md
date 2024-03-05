@@ -36,7 +36,7 @@ Detailed instructions on how to install, configure, and get the project running.
 
 Application
 ```bash
-git clone https://github.com/Vinay-the-dev-bot/CodeFlow.git
+git clone https://github.com/DEEPAK101020/Code-Genius.git
 cd frontend
 npm i
 npm run dev
@@ -44,7 +44,7 @@ npm run dev
 
 Run Server Locally
 ```bash
-git clone https://github.com/Vinay-the-dev-bot/CodeFlow.git
+git clone https://github.com/DEEPAK101020/Code-Genius.git
 cd backend
 npm i
 npm run server
