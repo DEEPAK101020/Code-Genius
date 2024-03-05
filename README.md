@@ -7,7 +7,7 @@ Future Map is your ultimate guide to navigating the educational journey ahead. W
 ## Project Type
 | Fullstack |
 ## Deplolyed App
-Frontend: - [Live Link](https://code-genius-l4ji-izhssylds-deepak101020s-projects.vercel.app/roadmap)
+Frontend: - [Live Link](https://code-genius-l4ji.vercel.app/)
 
 ## Directory Structure
 ```
