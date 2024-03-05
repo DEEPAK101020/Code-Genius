@@ -117,6 +117,7 @@ const XthRoadMap = () => {
             ],
           }),
         });
+        console.log(import.meta.env.VITE_api_Key)
 
         const data = await res.json();
 
