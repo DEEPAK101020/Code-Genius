@@ -31,3 +31,27 @@ my-app/
 │  ├─ view/
 ├─ index.html/
 ```
+
+ ## Screenshots
+ 
+     # This is the landing page.
+  ![Screenshot (1)](https://github.com/DEEPAK101020/Code-Genius/assets/131662969/dc10c4a9-177d-41c7-82d0-342d14e9e0cc)
+
+     # This is Footer.
+  ![Screenshot (2)](https://github.com/DEEPAK101020/Code-Genius/assets/131662969/606d2d9a-3fb5-4ee5-bc4a-13e44dd55469)
+
+     # This is the About Us page.
+  ![Screenshot (3)](https://github.com/DEEPAK101020/Code-Genius/assets/131662969/fc42ddd7-9e66-4c52-8912-c77e796034f5)
+
+     # This is the Score filtering page.
+  ![Screenshot (4)](https://github.com/DEEPAK101020/Code-Genius/assets/131662969/432d72e5-cba5-40a3-a63e-20af2d590d2a)
+  
+     # This is ai generated prediction.
+  ![Screenshot (6)](https://github.com/DEEPAK101020/Code-Genius/assets/131662969/d784e419-0337-4399-a011-4944cc5d288e)
+
+     
+  
+
+
+
+  
