@@ -100,7 +100,7 @@ const XthRoadMap = () => {
       Suggest me top 3 course based on my score   
       `;
 
-      console.log("asdasdsadsad", import.meta.env.VITE_api_Key);
+      
       try {
         const res = await fetch("https://api.openai.com/v1/chat/completions", {
           method: "POST",
