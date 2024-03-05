@@ -69,8 +69,8 @@ npm run server
   ![Screenshot (6)](https://github.com/DEEPAK101020/Code-Genius/assets/131662969/d784e419-0337-4399-a011-4944cc5d288e)
 
 
-     
-  
+ ## APIs Used
+ OpenAI API <a href="https://api.openai.com/v1/chat/completions" target="_blank">Judge</a>
 
 
 
