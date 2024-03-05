@@ -149,7 +149,7 @@ const SearchPath = () => {
               overflow="hidden"
               boxShadow="md"
               mb={5}
-              height="400px"
+              // // height="400px"
             >
               <Image
                 src="https://source.unsplash.com/featured/?education"
@@ -179,7 +179,7 @@ const SearchPath = () => {
               overflow="hidden"
               boxShadow="md"
               mb={5}
-              height="400px"
+              // height="400px"
             >
               <Image
                 src="https://source.unsplash.com/featured/?study"
@@ -209,7 +209,7 @@ const SearchPath = () => {
               overflow="hidden"
               boxShadow="md"
               mb={5}
-              height="400px"
+              // height="400px"
             >
               <Image
                 src="https://source.unsplash.com/featured/?bulb"
@@ -239,7 +239,7 @@ const SearchPath = () => {
               overflow="hidden"
               boxShadow="md"
               mb={5}
-              height="400px"
+              // height="400px"
             >
               <Image
                 src="https://source.unsplash.com/featured/?history"
@@ -270,7 +270,7 @@ const SearchPath = () => {
               overflow="hidden"
               boxShadow="md"
               mb={5}
-              height="400px"
+              // height="400px"
             >
               <Image
                 src="https://source.unsplash.com/featured/?currancy"
@@ -301,7 +301,7 @@ const SearchPath = () => {
               overflow="hidden"
               boxShadow="md"
               mb={5}
-              height="400px"
+              // height="400px"
             >
               <Image
                 src="https://source.unsplash.com/featured/?learning"
